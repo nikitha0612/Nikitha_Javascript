@@ -1,0 +1,289 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+<script type = "text/javascript">
+      function validation(){
+				var Name = document.forms["registration_form"]["name"].value;
+        var Mail = document.forms["registration_form"]["email"].value;
+				var User = document.forms["registration_form"]["username"].value;
+				var Password = document.forms["registration_form"]["password"].value;
+				var Confirm_Password = document.forms["registration_form"]["confirm_password"].value;
+				var phone = document.forms["registration_form"]["mobile"].value;
+				var dateofbirth = document.forms["registration_form"]["dob"].value;
+				if(name_validation(Name)
+				{
+					if(password_validation(Password)
+					{
+						if(dob_validation(dateofbirth))
+						{
+							if(user_validation(User)
+							{
+								if(email_validation(Mail)
+								{
+													}
+												}
+											}
+										}
+									}
+			return false;
+		}
+		function password_validation(Password,Confirm_password){
+				var len = Password.value.length;
+				if (len == 0 ||len >= 20 || passid_len < 8)
+				{
+					alert("Password should not be empty / length be between "+8+" to "+20);
+					Password.focus();
+					return false;
+				}else if(Password != Confirm_Password){
+					alert("Passwords doesnt much");
+					Password.focus();
+					return false;
+				}
+				return true;
+			}
+		function user_validation(User){
+			var letters = /^[A-Za-z]+$/;
+			if(uname.value.match(letters))
+			{
+				return true;
+			}else{
+				alert('Username must have alphabet characters only');
+				User.focus();
+				return false;
+			}
+		}
+		function email_validation(Mail){
+			var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+			if(uemail.value.match(mailformat))
+			{
+				return true;
+			}else{
+				alert("You have entered an invalid email address!");
+        Mail.focus();
+				return false;
+		}
+	}
+	function name_validation(Name){
+		if(name.length < 4){
+			alert("Please enter your full name");
+			Name.focus();
+			return false;
+		}else{
+			return true;
+		}
+
+	}
+	function dob_validation(dateofbirth){
+		if(dateofbirth ==0 || dateofbirth == NULL){
+			alert("please enter your date of birth")
+			dateofbirth.focus();
+			return false;
+		}else{
+			return true;
+		}
+	}
+</script>
+
+
+
+</script>
+<style type="text/css">
+	.container{
+    		margin-top: 3%;
+    		width: 30%;
+    		height: 75%;
+  	}
+
+  	#registrationcontainer{
+    		box-shadow: 5px 12px 20px #888888;
+  	}
+
+  	.header{
+    		display: flex;
+    		background-color: #33cccc;
+    		height: 50px;
+    		margin-bottom: 20px;
+    		margin-left: -20px;
+    		margin-right: -20px;
+    		color: white;
+  	}
+
+	.header .fa-graduation-cap{
+    		margin-top: 10px;
+    		margin-left: 10px;
+  	}
+
+  	.header h5{
+    		margin-top: 5px;
+    		align-content: center;
+    		margin-left: 34%;
+    		margin-right: 30%;
+  	}
+
+  	.header .fa-times{
+    		margin-top: 10px;
+  	}
+
+  	.inputText{
+    		display: flex;
+    		color: gray;
+  	}
+
+  	.inputText .fa-envelope{
+    		margin-top: 8px;
+    		position: absolute;
+    		margin-left: 20%;
+  	}
+
+  	.inputText .fa-unlock{
+    		margin-top: 8px;
+    		position: absolute;
+    		margin-left: 20%;
+  	}
+
+  	input{
+    		height: 40px;
+    		width: 98%;
+    		margin-bottom: 2%;
+  	}
+
+  	.btn-primary{
+    		margin-top: -10px;
+    		background-color: #33cccc;
+  	}
+
+  	button{
+    		font-family: 'Open Sans', sans-serif;
+    		width: 50%;
+    		margin-top: 2.5%;
+    		margin-bottom: 2.5%;
+  	}
+
+  	.tags{
+    		display: flex;
+  	}
+
+  	.OR{
+    		display: flex;
+		color: gray;
+  	}
+
+  	.btn-secondary{
+    		background-color: #003380;
+  	}
+
+  	#forgotPswd{
+    		margin-right: 25%;
+		color: gray;
+  	}
+
+	#register{
+		margin-right: -10%;
+		color: gray;
+	}
+
+  	.btn-success{
+    		margin-top: 25px;
+    		background-color: #77b300;
+  	}
+
+  	@media (max-width: 1200px) {
+    	.container{
+      		width: 40%;
+    	}
+
+	.inputText .fa-envelope{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 30%;
+    	}
+
+    	.inputText .fa-unlock{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 30%;
+    	}
+  	}
+
+  	@media (max-width: 800px) {
+    	.container{
+      		width: 70%;
+    	}
+
+    	.inputText .fa-envelope{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 50%;
+    	}
+
+    	.inputText .fa-unlock{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 50%;
+    	}
+  	}
+
+  	@media (max-width: 600px) {
+    	.container{
+      		width: 90%;
+    	}
+
+    	.inputText .fa-envelope{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 70%;
+    	}
+
+    	.inputText .fa-unlock{
+      		margin-top: 5px;
+      		position: absolute;
+      		margin-left: 70%;
+    	}
+  	}
+</style>
+</head>
+<body>
+    <div class="container" id="registrationcontainer">
+     <form class="registration_form" onsubmit="return validation()" action="success.php" method="">
+        <div class="header">
+          <i class="fas fa-graduation-cap"></i>
+          <h5><b><center>Registration<center></b></h5>
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="inputText">
+          <input type="text" name="name" placeholder="Full Name" required="required">
+          <span class="fas fa-envelope"></span>
+        </div>
+         <div class="inputText">
+          <input type="text" name="email" placeholder="E-mail" required="required">
+          <span class="fas fa-unlock"></span>
+         </div>
+        <div class="inputText">
+          <input type="text" name="username" placeholder="User Name" required="required">
+          <span class="fas fa-unlock"></span></div>
+         <div class="inputText">
+          <input type="password" name="password" placeholder="Password" required="required">
+          <span class="fas fa-unlock"></span></div>
+           <div class="inputText">
+          <input type="password" name="confirm_password" placeholder="Confirm Password" required="required">
+          <span class="fas fa-unlock"></span></div>
+           <div class="inputText">
+          <input type="tel" name="mobile" placeholder="Mobile" required="required">
+          <span class="fas fa-unlock"></span></div>
+           <div class="inputText">
+          <input type="date" name="dob" placeholder="Enter date of birth" required="required">
+          <span class="fas fa-unlock"></span></div>
+					<div class="inputText">
+				 <input type="number" name="age" placeholder="Enter your age" required="required">
+				 <span class="fas fa-unlock"></span></div>
+        </div>
+        <br/><br/>
+        <button type="button" class="btn btn-primary" id="Register"><b>Register</b></button>
+        <br/>
+</body>
+</html>
