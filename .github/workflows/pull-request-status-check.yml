@@ -1,13 +1,13 @@
-name: Pull Request commit
+name: On Push to Main
 
 on:
-  pull_request:  
+  push:  
     branches:
-      - main  
+      - main 
 
 jobs:
   build_and_test:
     runs-on: ubuntu-latest 
     steps:
       - name: Print message
-        run: echo "This action runs on every PR!"  # Print a message
+        run: echo "This action runs on every commit to main, including merges!"
